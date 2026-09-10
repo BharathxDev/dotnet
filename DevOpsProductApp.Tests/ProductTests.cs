@@ -1,3 +1,4 @@
+using DevOpsProductApp.Pages;
 using Xunit;
 
 namespace DevOpsProductApp.Tests;
@@ -5,18 +6,18 @@ namespace DevOpsProductApp.Tests;
 public class ProductTests
 {
     [Fact]
-    public void ProductCount_ShouldBeFour()
+    public void IndexModel_ShouldBeCreated()
     {
-        int productCount = 4;
+        var model = new IndexModel();
 
-        Assert.Equal(4, productCount);
+        Assert.NotNull(model);
     }
 
     [Fact]
-    public void ApplicationStatus_ShouldBeRunning()
+    public void ErrorModel_ShouldBeCreated()
     {
-        string status = "Running";
+        var model = new ErrorModel();
 
-        Assert.Equal("Running", status);
+        Assert.NotNull(model);
     }
 }
